@@ -47,9 +47,9 @@ tokenizer = AutoTokenizer.from_pretrained("./save/"+ model_name) #sp tokenizer ì
 enc = tokenizer(response)["input_ids"] #sp tokenizer
 # enc = tokenizer.encode(response) #bw tokenizer
 l = len(enc)
-if l < max_lem :
-    pad = (max_lem - l) * [0] + enc
-else : pad = enc[l-max_lem:]
+if l < max_len :
+    pad = (max_len - l) * [0] + enc
+else : pad = enc[l-max_len:]
 pad_ten = torch.tensor(pad)
 pad_ten = pad_ten.reshape(1,max_len)
 y = model(pad_ten)
