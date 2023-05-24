@@ -60,7 +60,7 @@ if st.button('피드백 받기'):
     output차원에 맞추어 피드백 넣기
     """
     st.write(response)
-    if label[1] == 1:
+    if label[2] == 1:
         st.success('(다항식) 곱하기 (단항식)을 잘하는구나!', icon="✅")
     else :
         st.info('(다항식) 곱하기 (단항식)을 잘 생각해보자!', icon="ℹ️")
