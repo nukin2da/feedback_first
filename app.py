@@ -9,8 +9,8 @@ import numpy as np
 st.title("자동 채점 모델 기반 자동 피드백")
 st.write("**팀원** : 수학교육과 김명식, 김재훈, 김지영, 신인섭, 윤예린, 정유진")
 
-st.subheader("문항2-8")
-st.markdown("$A=3x-2y, B=x+3y$ 일 때, $3A-2(A-B)$를 $x,y$에 대한 식으로 나타내시오.")
+st.subheader("문항 2-8")
+st.markdown("$ A=3x-2y,  B=x+3y $  일 때,  $ 3A-2(A-B) $를 $ x, y $에 대한 식으로 나타내시오.")
 st.write("안녕하세요 :)")
 response = st.text_input('답안 :', "답안을 작성해주세요")
 
