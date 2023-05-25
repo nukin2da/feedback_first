@@ -9,13 +9,13 @@ import numpy as np
 st.title("자동 채점 모델 기반 자동 피드백")
 st.write("**팀원** : 수학교육과 김명식, 김재훈, 김지영, 신인섭, 윤예린, 정유진")
 
-st.subheader("문항 1-3")
+st.subheader("문항 1-4")
 st.markdown("$ A=3x-2y,  B=x+3y $  일 때,  $ 3A-2(A-B) $를 $ x, y $에 대한 식으로 나타내시오.")
 st.write("안녕하세요 :)")
 response = st.text_input('답안 :', "답안을 작성해주세요")
 
 
-model_name = "1-3_rnn_sp_100" #모델 이름 넣어주기 확장자는 넣지말기!
+model_name = "1-4_rnn_sp_100" #모델 이름 넣어주기 확장자는 넣지말기!
 #모델에 맞는 hyperparameter 설정
 vs = 100 #vocab size
 emb = 16 #default 값 지정 안했으면 건드리지 않아도 됨
@@ -24,7 +24,7 @@ nh = 4 #default 값 지정 안했으면 건드리지 않아도 됨
 device = "cpu" #default 값 지정 안했으면 건드리지 않아도 됨
 max_len = 100
 #output_d 설정
-output_d = 1 #자기의 모델에 맞는 output_d구하기 (지식요소 개수)
+output_d = 2 #자기의 모델에 맞는 output_d구하기 (지식요소 개수)
 c = cfg(vs=vs, emb=emb, hidden=hidden, nh=nh, device=device)
 
 
