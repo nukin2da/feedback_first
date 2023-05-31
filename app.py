@@ -14,7 +14,7 @@ st.markdown("저장 매체의 용량을 나타내는 단위로 $B, KB, MB$ 등�
 st.write("위 문제에 대하여, 풀이과정과 답을 아래 답안 란에 자세하게 작성해 주세요. 여러분이 알고 있는 개념과 오개념을 파악하는 데 도움을 줄 것입니다.")
 response = st.text_input('답안 :', "답안을 작성해주세요")
 
-
+#모델의 이름 정하기
 model_name = "1-8_rnn_sp_140" #모델 이름 넣어주기 확장자는 넣지말기!
 #모델에 맞는 hyperparameter 설정
 vs = 140 #vocab size
@@ -24,7 +24,7 @@ nh = 4 #default 값 지정 안했으면 건드리지 않아도 됨
 device = "cpu" #default 값 지정 안했으면 건드리지 않아도 됨
 max_len = 100
 #output_d 설정
-output_d = 6 #자기의 모델에 맞는 output_d구하기 (지식요소 개수)
+output_d = 5 #자기의 모델에 맞는 output_d구하기 (지식요소 개수)
 c = cfg(vs=vs, emb=emb, hidden=hidden, nh=nh, device=device)
 
 model = RNNModel(output_d, c) #RNNModel 쓰는경우
