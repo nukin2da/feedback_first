@@ -50,7 +50,7 @@ label_1_8 = y.squeeze().detach().cpu().numpy().round()
 
 if st.button('피드백 받기', key='button_1_8_1'):
     """
-    output차원에 맞추어 피드백 넣기
+    본인의 답과 피드백을 확인하세요!
     """
     st.write(response)
     if len(label_1_8)>= 5:
