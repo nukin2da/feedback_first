@@ -53,10 +53,10 @@ if st.button('피드백 받기', key='button_1_8_1'):
     본인의 답과 피드백을 확인하세요!
     """
     st.write(response)
-    if len(label_1_8)>= 5:
+    if len(label_1_8) >= 5:
         if label_1_8[0] == 1 and label_1_8[1] == 1 and label_1_8[2] == 1 and label_1_8[3] == 0 and label_1_8[4] == 0:
             st.success('거듭제곱의 곱셈, 거듭제곱의 나눗셈, 단위의 변환을 잘하는구나!', icon="✅")
-        elif label_1_8[0] == 1 and label_1_8[1] == 0 and label_1_8[2] == 0 and label_1_8[3] == 1 and label_1_8[4] == 1:
+        elif label_1_8[0] == 0 and label_1_8[1] == 0 and label_1_8[2] == 0 and label_1_8[3] == 1 and label_1_8[4] == 1:
             st.success('거듭제곱의 나눗셈, 수의 나눗셈, 단위의 변환을 잘하는구나!', icon="✅")
         else :
             st.info('거듭제곱의 곱셈, 거듭제곱의 나눗셈, 수의 나눗셈, 단위의 변환을 잘 생각해보자!', icon="ℹ️")
